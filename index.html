@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOVA One — Silence, engineered</title>
+    <meta name="description" content="NOVA One: adaptive noise-cancelling headphones with a 60-hour battery and a beryllium-coated 40 mm driver." />
+    <meta name="theme-color" content="#ecebe7" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e0e10'/%3E%3Ccircle cx='32' cy='32' r='12' fill='none' stroke='%23ff4f1f' stroke-width='6'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body class="is-loading">
+    <div class="loader" aria-hidden="true">
+      <div class="loader__eq"></div>
+      <div class="loader__meta"><span>NOVA</span><span class="loader__pct">000</span></div>
+    </div>
+    <div class="columns" aria-hidden="true"></div>
+
+    <div class="cursor" aria-hidden="true"><span class="cursor__ring"><span class="cursor__label"></span></span><span class="cursor__dot"></span></div>
+    <div class="tint" aria-hidden="true"></div>
+    <div class="hero-bg" aria-hidden="true"><span class="hero-bg__word">NOVA</span><span class="hero-bg__word hero-bg__word--out">ONE</span></div>
+    <canvas id="webgl" aria-hidden="true"></canvas>
+
+    <header class="nav">
+      <a href="#top" class="nav__logo" data-cursor="Top">NOVA<i></i></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#sound"><span data-text="Sound">Sound</span></a>
+        <a href="#anatomy"><span data-text="Design">Design</span></a>
+        <a href="#colours"><span data-text="Colours">Colours</span></a>
+        <a href="#listen"><span data-text="Listen">Listen</span></a>
+        <a href="#shop"><span data-text="Shop">Shop</span></a>
+        <a href="#studio"><span data-text="Studio">Studio</span></a>
+      </nav>
+      <button class="nav__bag magnetic" data-open-bag>Bag (<span data-bag-count>0</span>)</button>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <div class="hero__left">
+          <span class="tag">New · 2026</span>
+          <h1 class="hero__title"><span class="mask"><span>Silence,</span></span><span class="mask"><span>engineered.</span></span></h1>
+        </div>
+        <div class="hero__right">
+          <p>Adaptive noise-cancelling that listens 48,000 times a second — and a sound so detailed you’ll hear the room it was recorded in.</p>
+          <div class="hero__buy">
+            <a href="#colours" class="btn btn--accent magnetic" data-cursor="Buy"><span>Buy NOVA One</span><b>$349</b></a>
+            <a href="#sound" class="btn btn--line magnetic"><span>Explore</span></a>
+          </div>
+        </div>
+        <div class="hero__ticker mono">
+          <span>ANC −42 dB</span><span>60 h playback</span><span>40 mm Be driver</span><span>Bluetooth 5.4 · LDAC</span>
+        </div>
+      </section>
+
+      <!-- Sound / stats -->
+      <section class="sound" id="sound">
+        <div class="sound__inner">
+          <span class="tag">01 — Sound</span>
+          <h2 class="h2" data-lines>Hear everything.<br /><span class="muted">Or absolutely nothing.</span></h2>
+          <div class="stats">
+            <div class="stat"><strong><span data-count="42" data-prefix="−">0</span><small>dB</small></strong><p>Adaptive noise cancelling, tuned 48,000× per second by eight microphones.</p></div>
+            <div class="stat"><strong><span data-count="60">0</span><small>h</small></strong><p>Of playback on a single charge. Five minutes gives you four more hours.</p></div>
+            <div class="stat"><strong><span data-count="40">0</span><small>mm</small></strong><p>Beryllium-coated dynamic drivers for fast, effortless, fatigue-free detail.</p></div>
+            <div class="stat"><strong><span data-count="12">0</span><small>ms</small></strong><p>Wireless latency in game mode. Lips, footsteps and beats — perfectly in sync.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Anatomy (pinned exploded view) -->
+      <section class="anatomy" id="anatomy">
+        <div class="anatomy__head">
+          <span class="tag">02 — Design</span>
+          <h2 class="h2 anatomy__title">Every part,<br />obsessed over.</h2>
+        </div>
+        <div class="callout callout--1"><svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M0 50 H120 L200 10" /></svg><div><span class="mono">A</span><h4>Beryllium driver</h4><p>40 mm, 0.02 mm thin, 3 Hz – 40 kHz</p></div></div>
+        <div class="callout callout--2"><svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M200 50 H80 L0 10" /></svg><div><span class="mono">B</span><h4>Memory-foam cushions</h4><p>Protein leather, magnetic, replaceable</p></div></div>
+        <div class="callout callout--3"><svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M0 10 H120 L200 50" /></svg><div><span class="mono">C</span><h4>Aerospace aluminium</h4><p>Yokes swivel 180°, fold flat to 38 mm</p></div></div>
+        <div class="callout callout--4"><svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M200 10 H80 L0 50" /></svg><div><span class="mono">D</span><h4>Eight microphones</h4><p>Beam-forming voice pick-up, wind-resistant</p></div></div>
+        <div class="anatomy__progress mono"><span>Assembled</span><i><b></b></i><span>Exploded</span></div>
+      </section>
+
+      <!-- Colours -->
+      <section class="colours" id="colours">
+        <div class="colours__panel">
+          <span class="tag">03 — Colours</span>
+          <h2 class="h2">Pick your<br /><span class="colours__name"><span>Ember</span></span></h2>
+          <div class="swatches" role="radiogroup" aria-label="Colourway"></div>
+          <div class="colours__buy">
+            <div><small class="mono">NOVA One</small><strong>$349</strong></div>
+            <button class="btn btn--accent magnetic" data-add-one data-cursor="Add"><span>Add to bag</span></button>
+          </div>
+          <p class="colours__note mono">Free delivery · 30-day home trial · 2-year warranty</p>
+        </div>
+      </section>
+
+      <!-- Listen (Web Audio visualiser) -->
+      <section class="listen" id="listen">
+        <canvas class="listen__viz"></canvas>
+        <div class="listen__inner">
+          <span class="tag tag--light">04 — Listen</span>
+          <h2 class="h2" data-lines>Turn it up.</h2>
+          <button class="play magnetic" aria-pressed="false" data-cursor="Play">
+            <span class="play__icon"><i></i><i></i></span><span class="play__label">Play demo loop</span>
+          </button>
+          <p class="mono listen__hint">A tiny synthesised loop, made live in your browser.</p>
+        </div>
+      </section>
+
+      <!-- Shop -->
+      <section class="shop" id="shop">
+        <div class="shop__head">
+          <span class="tag">05 — Shop</span>
+          <h2 class="h2" data-lines>The line-up.</h2>
+        </div>
+        <div class="products"></div>
+      </section>
+
+      <!-- Studio / portfolio -->
+      <section class="studio" id="studio">
+        <div class="studio__head">
+          <div>
+            <span class="tag">06 — NOVA Studio</span>
+            <h2 class="h2" data-lines>Work beyond<br />the headphones.</h2>
+          </div>
+          <p class="mono">Drag to explore →</p>
+        </div>
+        <div class="rail"><div class="rail__track"></div></div>
+      </section>
+
+      <!-- Quote -->
+      <section class="quote">
+        <p class="quote__text"></p>
+        <cite class="mono"></cite>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <h2 class="cta__title"><span>Hear the</span><span>difference.</span></h2>
+        <a href="#colours" class="btn btn--accent btn--xl magnetic" data-cursor="Go"><span>Order NOVA One</span><b>$349</b></a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__marquee mono"><div><span>NOVA ONE ✺ SILENCE, ENGINEERED ✺ 60 H ✺ −42 DB ✺ </span><span>NOVA ONE ✺ SILENCE, ENGINEERED ✺ 60 H ✺ −42 DB ✺ </span></div></div>
+      <div class="footer__grid">
+        <div><h5 class="mono">Products</h5><a href="#shop">NOVA One</a><a href="#shop">NOVA Studio</a><a href="#shop">NOVA Buds</a></div>
+        <div><h5 class="mono">Support</h5><a href="#">Setup</a><a href="#">Warranty</a><a href="#">Contact</a></div>
+        <div><h5 class="mono">Company</h5><a href="#studio">Studio</a><a href="#">Careers</a><a href="#">Press</a></div>
+        <form class="footer__news"><h5 class="mono">Newsletter</h5><div><input type="email" required placeholder="Email address" aria-label="Email address" /><button type="submit" aria-label="Subscribe">→</button></div></form>
+      </div>
+      <div class="footer__word" aria-hidden="true">NOVA</div>
+      <div class="footer__bottom mono"><span>© 2026 NOVA Audio</span><span>Designed in Copenhagen</span></div>
+    </footer>
+
+    <aside class="bag" aria-label="Shopping bag">
+      <div class="bag__overlay" data-close-bag></div>
+      <div class="bag__panel" data-lenis-prevent>
+        <div class="bag__head"><h3>Bag <sup data-bag-count>0</sup></h3><button class="bag__close mono" data-close-bag>Close</button></div>
+        <p class="bag__empty">Nothing here yet.</p>
+        <ul class="bag__list"></ul>
+        <div class="bag__foot">
+          <div class="bag__sub"><span class="mono">Subtotal</span><strong data-subtotal>$0</strong></div>
+          <button class="btn btn--accent bag__checkout"><span>Checkout</span></button>
+        </div>
+      </div>
+    </aside>
+    <div class="toast mono" role="status" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
